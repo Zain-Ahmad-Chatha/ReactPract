@@ -1,0 +1,19 @@
+.addBtn {
+  background-color: gray;
+}
+.deleteBtn {
+  background-color: rgba(255, 0, 0, 0.46);
+}
+.editBtn {
+  background-color: steelblue;
+}
+button {
+  border: none;
+  padding: 5px 10px;
+  transition: box-shadow 1s;
+}
+button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
