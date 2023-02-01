@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 // import Home from "./routeComponents/Home";
 // import About from "./routeComponents/About";
 // import Contact from "./routeComponents/Contact";
-import { About, Contact, Home, ProductList } from "./routeComponents";
+import { About, Contact, Home, ProductList, CheckBox } from "./routeComponents";
 import Navbar from "./routeComponents/Navbar";
 import "./RoutingApp.css";
 const RoutingApp = () => {
@@ -26,6 +26,7 @@ const RoutingApp = () => {
               <Route path={"contact"} element={<Contact />} />
               <Route path={"about"} element={<About />} />
               <Route path={"product"} element={<ProductList />} />
+              <Route path={"checkBox"} element={<CheckBox />} />
               <Route path={"*"} element={<div>Page not Found </div>} />
             </Route>
           </React.Fragment>

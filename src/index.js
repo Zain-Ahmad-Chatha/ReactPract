@@ -12,11 +12,13 @@ import Inputs from "./dynamicPractice/Inputs";
 import App from "./App";
 import RoutingApp from "./RoutingApp";
 import { BrowserRouter } from "react-router-dom";
-
+import { MultiSelect } from "./multiSelect";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <RoutingApp />
+      {
+        // <RoutingApp />
+      }
     </BrowserRouter>
     ,{/* <App/> */}
     {/* <App/> */} {/* this is old pracice */}
@@ -25,6 +27,7 @@ ReactDOM.render(
     {
       // <Inputs></Inputs>
     }
+    <MultiSelect />
   </React.StrictMode>,
   document.getElementById("root")
 );

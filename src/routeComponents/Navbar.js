@@ -21,6 +21,9 @@ const Navbar = () => {
           <li>
             <NavLink to={"/product"}>Products</NavLink>
           </li>
+          <li>
+            <NavLink to={"/checkBox"}>Check Box</NavLink>
+          </li>
         </ul>
       </nav>
       <hr></hr>
