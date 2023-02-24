@@ -13,6 +13,7 @@ import App from "./App";
 import RoutingApp from "./RoutingApp";
 import { BrowserRouter } from "react-router-dom";
 import { MultiSelect } from "./multiSelect";
+import { Comment } from "./book";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -20,14 +21,17 @@ ReactDOM.render(
         // <RoutingApp />
       }
     </BrowserRouter>
-    ,{/* <App/> */}
+    {/* <App/> */}
     {/* <App/> */} {/* this is old pracice */}
     {/* do again same practice. */}
     {/* <AgainCounter /> */}
     {
       // <Inputs></Inputs>
     }
-    <MultiSelect />
+    {
+      // <MultiSelect />
+    }
+    {<Comment />}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -40,12 +40,16 @@ const MultiSelect = () => {
   };
   const onChangeMultiSelect1 = (e) => {
     if (required.length < e.length) {
+      console.log("in if");
       // mean new option added
       const ids = required.map((option) => option.id);
+      console.log("ids IF :", ids);
       let newAdded = e.filter((option) => !ids.includes(option.id));
+      console.log("newAdded", newAdded);
       setRequired([...required, newAdded[0]]);
       setMultiOptions({ ...mulitOptions, values: e });
     } else {
+      console.log("in else");
       setMultiOptions({ ...mulitOptions, values: e });
       // mean i have to remove a option
       const availableOptionIds = e.map((option) => option.id);
@@ -53,6 +57,7 @@ const MultiSelect = () => {
       const removedOption = required.filter(
         (option) => !availableOptionIds.includes(option.id)
       );
+      console.log("removed Option : ", removedOption);
 
       const newRequired = required.map((option) => {
         if (option.id == removedOption[0].id) {
