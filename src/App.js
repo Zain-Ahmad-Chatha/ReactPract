@@ -14,7 +14,6 @@ class App extends React.Component {
     ],
   };
   handle_deleteBtn = (deleteIDS) => {
-    console.log("calling from child..");
     const array = this.state.count.filter((c) => c.id !== deleteIDS);
     this.setState({ count: array });
   };
