@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@blueprintjs/core";
+// import { Button } from "@blueprintjs/core";
 import Select from "react-select";
 
 export const all = [
@@ -28,7 +28,7 @@ const MultiSelect = () => {
     const removedOption = required.filter((option) => !ids.includes(option.id));
 
     const newRequired = required.map((option) => {
-      if (option.id == removedOption[0].id) {
+      if (option.id === removedOption[0].id) {
         return {
           ...option,
           status: false,
@@ -60,7 +60,7 @@ const MultiSelect = () => {
       console.log("removed Option : ", removedOption);
 
       const newRequired = required.map((option) => {
-        if (option.id == removedOption[0].id) {
+        if (option.id === removedOption[0].id) {
           return {
             ...option,
             status: false,

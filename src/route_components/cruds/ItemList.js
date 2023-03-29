@@ -18,12 +18,10 @@ const ItemList = () => {
   const [product, setProduct] = useState(ARRAY);
 
   const onDelete = (id) => {
-    console.log("delete", id);
     setProduct(product.filter((obj) => obj.id !== id));
   };
 
   const addProduct = (data, index) => {
-    console.log("data dd : ", data, " index:", index);
     if (options.addition) {
       setProduct([...product, data]);
       setOptions({ ...options, addition: false, edit: false });
@@ -34,8 +32,6 @@ const ItemList = () => {
           obj.name = data.name;
         }
       });
-      console.log("updated ", data1);
-
       setOptions({ ...options, addition: false, edit: false });
     }
   };
@@ -62,5 +58,4 @@ const ItemList = () => {
     </div>
   );
 };
-
 export default ItemList;

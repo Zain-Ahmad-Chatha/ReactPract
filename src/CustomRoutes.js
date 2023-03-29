@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-// import Home from "./routeComponents/Home";
-// import About from "./routeComponents/About";
-// import Contact from "./routeComponents/Contact";
-import { About, Contact, Home, ProductList, CheckBox } from "./routeComponents";
-import Navbar from "./routeComponents/Navbar";
-import "./RoutingApp.css";
-const RoutingApp = () => {
+import {
+  About,
+  Contact,
+  Home,
+  ProductList,
+  CheckBox,
+  Navbar,
+} from "./route_components";
+import { Comment } from "./redux_and_toolkit";
+import CounterApp from "./counter_components";
+import { NotesTodoList } from "./todoList";
+import "./customRoutes.css";
+
+const CustomRoutes = () => {
   return (
     <div>
       <Routes>
@@ -15,6 +22,11 @@ const RoutingApp = () => {
             <Route path={"/"} element={<div> The home page </div>} />
             <Route path={"/contact"} element={<div> The contact page </div>} />
             <Route path={"/about"} element={<div> The about page </div>} />
+            <Route path={"product"} element={<ProductList />} />
+            <Route path={"checkBox"} element={<CheckBox />} />
+            <Route path={"redux"} element={<Comment />} />
+            <Route path={"counters"} element={<CounterApp />} />
+            <Route path={"notes"} element={<NotesTodoList />} />
             <Route path={"*"} element={<div>Page not Found </div>} />
           </React.Fragment>
         )}
@@ -27,6 +39,9 @@ const RoutingApp = () => {
               <Route path={"about"} element={<About />} />
               <Route path={"product"} element={<ProductList />} />
               <Route path={"checkBox"} element={<CheckBox />} />
+              <Route path={"redux"} element={<Comment />} />
+              <Route path={"counters"} element={<CounterApp />} />
+              <Route path={"notes"} element={<NotesTodoList />} />
               <Route path={"*"} element={<div>Page not Found </div>} />
             </Route>
           </React.Fragment>
@@ -36,4 +51,4 @@ const RoutingApp = () => {
   );
 };
 
-export default RoutingApp;
+export default CustomRoutes;

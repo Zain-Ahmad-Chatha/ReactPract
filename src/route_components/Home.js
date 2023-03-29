@@ -13,7 +13,7 @@ const Home = () => {
         // this is called shared outlet routes, using nested routes.
         // it says that your parent route should contain outlet
       }
-      <h1>home page </h1>
+      <h1>Home Page </h1>
     </React.Fragment>
   );
 };

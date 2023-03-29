@@ -1,10 +1,8 @@
 import React from "react";
-import NavBar from "./components/navbar";
-import Counters from "./components/counters";
-import "./App.css";
-// import Counter from './components/counter';
+import NavBar from "./navbar";
+import Counters from "./counters";
 
-class App extends React.Component {
+class CounterApp extends React.Component {
   state = {
     count: [
       { id: 1, value: 4 },
@@ -54,11 +52,8 @@ class App extends React.Component {
       <React.Fragment>
         <NavBar
           totalCounts={this.state.count.filter((c) => c.value > 0).length}
-        >
-          {" "}
-        </NavBar>
+        ></NavBar>
         <main className="container">
-          <p>working.....</p>
           <Counters
             counts={this.state.count}
             on_Reset={this.handle_resetBtn}
@@ -77,4 +72,4 @@ class App extends React.Component {
   } //end render
 } //end class
 
-export default App;
+export default CounterApp;

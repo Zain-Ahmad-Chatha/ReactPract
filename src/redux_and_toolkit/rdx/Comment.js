@@ -15,8 +15,10 @@ import CakeContainer from "./reduxComponents/CakeContainer";
 import HooksCakeContainer from "./reduxComponents/HooksCakeContainer";
 
 /* Redux Toolkit Practice */
-import { Cake, IceCream, Users } from "../../src/rtk/components";
+import { Cake, IceCream, Users } from "../rtk/components";
+
 import rtkStore from "../rtk/app";
+
 const Comment = () => {
   const [state, setState] = useState({
     show: false,

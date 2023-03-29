@@ -24,6 +24,15 @@ const Navbar = () => {
           <li>
             <NavLink to={"/checkBox"}>Check Box</NavLink>
           </li>
+          <li>
+            <NavLink to={"/redux"}>Redux || Toolkit</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/counters"}>Counter App </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/notes"}>Notes Todo </NavLink>
+          </li>
         </ul>
       </nav>
       <hr></hr>

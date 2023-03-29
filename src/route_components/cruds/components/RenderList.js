@@ -47,7 +47,6 @@ const RenderList = ({
                     className="editBtn"
                     onClick={() => onEdit(obj, index)}
                   >
-                    {" "}
                     Edit
                   </button>
                 </td>
