@@ -11,6 +11,7 @@ import {
 import { Comment } from "./redux_and_toolkit";
 import CounterApp from "./counter_components";
 import { NotesTodoList } from "./todoList";
+import { TodoApp } from "./todoList2";
 import "./customRoutes.css";
 
 const CustomRoutes = () => {
@@ -27,6 +28,7 @@ const CustomRoutes = () => {
             <Route path={"redux"} element={<Comment />} />
             <Route path={"counters"} element={<CounterApp />} />
             <Route path={"notes"} element={<NotesTodoList />} />
+            <Route path={"todoList"} element={<TodoApp />} />
             <Route path={"*"} element={<div>Page not Found </div>} />
           </React.Fragment>
         )}
@@ -42,6 +44,7 @@ const CustomRoutes = () => {
               <Route path={"redux"} element={<Comment />} />
               <Route path={"counters"} element={<CounterApp />} />
               <Route path={"notes"} element={<NotesTodoList />} />
+              <Route path={"todoList"} element={<TodoApp />} />
               <Route path={"*"} element={<div>Page not Found </div>} />
             </Route>
           </React.Fragment>

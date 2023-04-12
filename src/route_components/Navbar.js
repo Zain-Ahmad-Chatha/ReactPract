@@ -33,6 +33,9 @@ const Navbar = () => {
           <li>
             <NavLink to={"/notes"}>Notes Todo </NavLink>
           </li>
+          <li>
+            <NavLink to={"/todoList"}>Todo List </NavLink>
+          </li>
         </ul>
       </nav>
       <hr></hr>
