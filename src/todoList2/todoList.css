@@ -23,7 +23,7 @@
   gap: 0.8rem;
 }
 
-.btn {
+.btn1 {
   background: hsl(200, 100%, 50%, 0.1);
   border: 1px solid hsl(200, 100%, 50%);
   color: hsl(200, 100%, 50%);
@@ -33,8 +33,8 @@
   outline: none;
 }
 
-.btn:hover,
-.btn:focus-visible {
+.btn1:hover,
+.btn1:focus-visible {
   background: hsl(200, 100%, 50%, 0.2);
 }
 

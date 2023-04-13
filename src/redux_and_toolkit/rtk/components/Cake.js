@@ -4,7 +4,6 @@ import { ordered, reStock } from "../features/cake";
 const Cake = () => {
   const dispatch = useDispatch();
   const cakes = useSelector((state) => {
-    console.log("state is", state);
     return state.cake?.numOfCakes;
   });
   return (

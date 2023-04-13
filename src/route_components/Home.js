@@ -1,12 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const onContact = () => {
-    navigate("/contact");
-  };
+  // const onContact = () => {
+  //   navigate("/contact");
+  // };
   return (
     <React.Fragment>
       {

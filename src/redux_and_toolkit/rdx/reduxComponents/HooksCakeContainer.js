@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import { buyCake } from "../redux/cake/cakeActions";
 import { useSelector, useDispatch } from "react-redux";
 

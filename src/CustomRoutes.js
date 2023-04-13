@@ -20,9 +20,9 @@ const CustomRoutes = () => {
       <Routes>
         {false && (
           <React.Fragment>
-            <Route path={"/"} element={<div> The home page </div>} />
-            <Route path={"/contact"} element={<div> The contact page </div>} />
-            <Route path={"/about"} element={<div> The about page </div>} />
+            <Route path={"/"} element={<Home />} />
+            <Route path={"contact"} element={<Contact />} />
+            <Route path={"about"} element={<About />} />
             <Route path={"product"} element={<ProductList />} />
             <Route path={"checkBox"} element={<CheckBox />} />
             <Route path={"redux"} element={<Comment />} />

@@ -7,11 +7,6 @@ class AddList extends React.Component {
       description: event.target.description.value,
     });
   };
-
-  //   value={editDetail.name}
-  //   onChange={(event) =>
-  //     setEditDetail({ ...editDetail, name: event.target.name.value })
-  //   }
   render() {
     return (
       <form className="ui form" onSubmit={this.onSubmit}>

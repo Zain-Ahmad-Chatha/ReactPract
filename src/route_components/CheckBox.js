@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const CheckBox = () => {
-  const [isChecked, setIsChecked] = useState(0);
   const [test, setTest] = useState([
     {
       id: "12",
@@ -10,10 +9,6 @@ const CheckBox = () => {
       permissions: [0, 0, 0, 0],
     },
   ]);
-
-  const handleOnChange = () => {
-    setIsChecked(!isChecked);
-  };
 
   const handleOnChangeChild = (
     index,
@@ -93,7 +88,7 @@ const CheckBox = () => {
         <input
           type={"checkbox"}
           name="topping"
-          checked={isChecked}
+          checked={true}
           onChange={(event) => handleOnChangeCheckbox(event)}
         />
         &nbsp; Dashboard

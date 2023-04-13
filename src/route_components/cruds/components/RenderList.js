@@ -7,8 +7,8 @@ const RenderList = ({
   showAdd = () => {},
 }) => {
   return (
-    <React.Fragment>
-      <div>
+    <>
+      <div style={{ margin: "10px" }}>
         <button className="addBtn" onClick={showAdd}>
           Add Product
         </button>
@@ -23,12 +23,12 @@ const RenderList = ({
           </tr>
         </thead>
         <tbody>
-          {product.map((obj, index) => {
+          {product.map((prod, index) => {
             return (
               <tr key={index}>
                 <td> {index + 1} </td>
-                <td> {obj.id} </td>
-                <td> {obj.name} </td>
+                <td> {prod.id} </td>
+                <td> {prod.name} </td>
                 <td>
                   <button
                     style={{
@@ -36,7 +36,7 @@ const RenderList = ({
                       color: "white",
                     }}
                     className="deleteBtn"
-                    onClick={() => onDelete(obj.id)}
+                    onClick={() => onDelete(prod.id)}
                   >
                     Delete
                   </button>
@@ -45,7 +45,7 @@ const RenderList = ({
                       color: "white",
                     }}
                     className="editBtn"
-                    onClick={() => onEdit(obj, index)}
+                    onClick={() => onEdit(prod)}
                   >
                     Edit
                   </button>
@@ -55,7 +55,7 @@ const RenderList = ({
           })}
         </tbody>
       </table>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -28,7 +28,7 @@ const TodoApp = () => {
   const toggleTodo = (id, completed) => {
     setTodos((prevTodos) => {
       return prevTodos.map((todo) => {
-        if (todo.id == id) {
+        if (todo.id === id) {
           return {
             ...todo,
             completed,

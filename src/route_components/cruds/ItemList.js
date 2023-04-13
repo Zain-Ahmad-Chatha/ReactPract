@@ -3,56 +3,56 @@ import { RenderList, Add_Edit } from "./components";
 import "./ItemList.css";
 
 const ItemList = () => {
-  const [options, setOptions] = useState({
-    addition: false,
-    data: { id: "", name: "" },
-    edit: false,
+  const [state, setState] = useState({
+    add: "",
+    id: "",
+    name: "",
   });
-  const ARRAY = [
-    { id: 1, name: "zain 1" },
-    { id: 2, name: "zain 2" },
-    { id: 3, name: "zain 3" },
-    { id: 4, name: "zain 4" },
-    { id: 5, name: "zain 5" },
-  ];
-  const [product, setProduct] = useState(ARRAY);
+  const [products, setProducts] = useState([]);
 
   const onDelete = (id) => {
-    setProduct(product.filter((obj) => obj.id !== id));
+    setProducts(products.filter((prod) => prod.id !== id));
   };
 
-  const addProduct = (data, index) => {
-    if (options.addition) {
-      setProduct([...product, data]);
-      setOptions({ ...options, addition: false, edit: false });
-    } else {
-      const data1 = product.map((obj) => {
-        if (obj.id == data.id) {
-          obj.id = data.id;
-          obj.name = data.name;
-        }
+  const addProduct = (product) => {
+    if (state.add === "add") {
+      setProducts([...products, product]);
+      setState({
+        ...state,
+        add: "",
       });
-      setOptions({ ...options, addition: false, edit: false });
+    } else {
+      // updating
+      const updatedProducts = products.map((prod) => {
+        if (prod.id === product.id) {
+          return {
+            ...prod,
+            name: product.name,
+          };
+        }
+        return prod;
+      });
+      setProducts(updatedProducts);
+      setState({ ...state, add: "" });
     }
   };
   return (
     <div>
-      {(options.addition || options.edit) && (
+      <RenderList
+        product={products}
+        onDelete={onDelete}
+        onEdit={(data) =>
+          setState({ ...state, id: data.id, name: data.name, add: "edit" })
+        }
+        showAdd={() => setState({ ...state, add: "add" })}
+      />
+
+      {state.add && (
         <Add_Edit
-          data={options.data}
+          {...state}
           addProduct={addProduct}
-          heading={options.addition ? "Add Product" : "Edit Product"}
-          btnHeading={options.addition ? "Add Product" : "Update Product"}
-        />
-      )}
-      {(!options.addition || !options.edit) && (
-        <RenderList
-          product={product}
-          onDelete={onDelete}
-          onEdit={(data, index) =>
-            setOptions({ ...options, data: data, edit: true, index: index })
-          }
-          showAdd={() => setOptions({ ...options, addition: true, index: -1 })}
+          heading={state.add === "add" ? "Add Product" : "Edit Product"}
+          btnHeading={state.add === "add" ? "Add Product" : "Update Product"}
         />
       )}
     </div>

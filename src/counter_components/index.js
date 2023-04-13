@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./navbar";
+import NavBarCount from "./navbarCount";
 import Counters from "./counters";
 
 class CounterApp extends React.Component {
@@ -50,9 +50,9 @@ class CounterApp extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar
+        <NavBarCount
           totalCounts={this.state.count.filter((c) => c.value > 0).length}
-        ></NavBar>
+        ></NavBarCount>
         <main className="container">
           <Counters
             counts={this.state.count}

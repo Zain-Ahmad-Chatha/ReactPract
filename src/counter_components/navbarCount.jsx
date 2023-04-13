@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = ({ totalCounts }) => {
+const NavBarCount = ({ totalCounts }) => {
   return (
     <nav className="navbar navbar-light bg-light">
       <a className="navbar-brand" href="#">
@@ -11,4 +11,4 @@ const NavBar = ({ totalCounts }) => {
   );
 };
 
-export default NavBar;
+export default NavBarCount;

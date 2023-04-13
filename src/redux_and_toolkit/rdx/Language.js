@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 // props coming from Comment.js
 const Language = ({ language }) => {
   return (
@@ -9,8 +9,11 @@ const Language = ({ language }) => {
   );
 };
 
+/*
 Language.propTypes = {
   // languages: PropTypes.array.isRequired,
 };
+
+*/
 
 export default Language;

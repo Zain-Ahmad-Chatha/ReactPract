@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // destructuring from props.
 
 const Form = ({ handleSubmit }) => {
-  const [newItem, setNewItem] = useState();
+  const [newItem, setNewItem] = useState("");
   const addToList = (event) => {
     event.preventDefault();
     if (!newItem) return;
@@ -20,9 +20,10 @@ const Form = ({ handleSubmit }) => {
           onChange={(e) => setNewItem(e.target.value)}
           type="text"
           id="item"
+          name="item"
         />
       </div>
-      <button className="btn">Add</button>
+      <button className="btn1">Add</button>
     </form>
   );
 };

@@ -1,37 +1,33 @@
 import React, { useState } from "react";
 
-const Add_Edit = (props) => {
-  const [values, setValues] = useState({
-    id: props.data.id,
-    name: props.data.name,
+const Add_Edit = ({ id, name, addProduct, heading, btnHeading }) => {
+  const [product, setProduct] = useState({
+    id: id || "",
+    name: name || "",
   });
-  const add = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-    props.addProduct(values, props.data.index);
+    addProduct({
+      id: product.id ? product.id : crypto.randomUUID(),
+      name: product.name,
+    });
   };
   return (
     <div className="add_edit">
-      <div>
-        <h3> {props.heading} </h3>
+      <div style={{ margin: "10px" }}>
+        <h3> {heading} </h3>
       </div>
-      <form onSubmit={add}>
-        <label>ID : </label>
-        <input
-          type={"number"}
-          value={values.id}
-          name="id"
-          onChange={(e) => setValues({ ...values, id: e.target.value })}
-        />
+      <form onSubmit={onSubmit} style={{ margin: "10px" }}>
         <label>Name : </label>
         <input
           type={"text"}
-          value={values.name}
+          value={product.name}
           name="name"
-          onChange={(e) => setValues({ ...values, name: e.target.value })}
+          onChange={(e) => setProduct({ ...product, name: e.target.value })}
         />
 
         <button style={{ marginLeft: "10px" }} type="submit">
-          {props.btnHeading}
+          {btnHeading}
         </button>
       </form>
     </div>

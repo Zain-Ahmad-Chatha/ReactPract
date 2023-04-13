@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, Form } from "react-bootstrap";
 
 import { languages } from "./utils";
-import LanguageList from "./LanguageList";
+// import LanguageList from "./LanguageList";
 
 import LanguageSection from "./LanguageSection";
 

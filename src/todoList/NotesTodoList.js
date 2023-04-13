@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AddList from "./components/addList";
 import EditNote from "./components/editNote";
 import ShowAllList from "./components/showAllList";
 
-const initialValue = [{ name: "Star Wars", description: "Return of the Jedi" }];
-
 const NotesTodoList = () => {
-  const [notes, setNotes] = useState(initialValue);
+  const [notes, setNotes] = useState([]);
   const [addForm, setAddForm] = useState(false);
   const [editForm, setEditForm] = useState(false);
 
@@ -16,8 +14,7 @@ const NotesTodoList = () => {
     index: 0,
   });
 
-  const onEdithandle = (event, index, note) => {
-    console.log("in edit");
+  const onEdithandle = (index, note) => {
     setEditDetail({
       index: index,
       name: note.name,
@@ -25,25 +22,27 @@ const NotesTodoList = () => {
     });
     setEditForm(true);
   };
-  const onDeleteHandle = (event, index) => {
-    return setNotes(notes.filter((notes, ind) => ind != index));
+  const onDeleteHandle = (id) => {
+    return setNotes(notes.filter((note) => note.id !== id));
   };
 
-  const updateOriginalState = () => {
-    console.log(editDetail);
-    const tempArr = notes;
+  const updateOriginalState = (name, description) => {
+    const tempArr = [...notes];
     tempArr[editDetail?.index] = {
-      name: editDetail.name,
-      description: editDetail.description,
+      name: name,
+      description: description,
     };
     setNotes(tempArr);
+    setEditForm(false);
   };
   const onSubmit = (formValues) => {
     const { name, description } = formValues;
-    if (!name || !description) {
-      return;
-    }
-    setNotes((prev) => [...prev, { name, description }]);
+    if (!name || !description) return;
+
+    setNotes((prev) => [
+      ...prev,
+      { id: crypto.randomUUID(), name, description },
+    ]);
     setAddForm(false);
   };
   return (
@@ -67,13 +66,9 @@ const NotesTodoList = () => {
         Create Note
       </button>
 
-      {addForm ? <AddList onSubmit={onSubmit} /> : ""}
+      {addForm && <AddList onSubmit={onSubmit} />}
 
-      {editForm ? (
-        <EditNote props={editDetail} onSubmit={updateOriginalState} />
-      ) : (
-        ""
-      )}
+      {editForm && <EditNote {...editDetail} onSubmit={updateOriginalState} />}
     </div>
   );
 };
