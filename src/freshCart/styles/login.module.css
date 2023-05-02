@@ -1,0 +1,30 @@
+.loginContainer {
+  border: 1px solid rgb(223, 215, 215);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+.heading {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.loginForm {
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+.formGroup input {
+  /* border: none; */
+  padding: 10px;
+  border: 2px solid rgb(221, 215, 215);
+  border-radius: 10px;
+}
+
+.login {
+  float: right;
+}

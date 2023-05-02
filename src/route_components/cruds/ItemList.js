@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RenderList, Add_Edit } from "./components";
+import { RenderList, AddEdit } from "./components";
 import "./ItemList.css";
 
 const ItemList = () => {
@@ -48,7 +48,7 @@ const ItemList = () => {
       />
 
       {state.add && (
-        <Add_Edit
+        <AddEdit
           {...state}
           addProduct={addProduct}
           heading={state.add === "add" ? "Add Product" : "Edit Product"}

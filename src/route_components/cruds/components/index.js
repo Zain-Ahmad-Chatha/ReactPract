@@ -1,4 +1,4 @@
 import RenderList from "./RenderList";
-import Add_Edit from "./Add_Edit";
+import AddEdit from "./AddEdit";
 
-export { RenderList, Add_Edit };
+export { RenderList, AddEdit };

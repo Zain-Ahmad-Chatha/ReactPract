@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Add_Edit = ({ id, name, addProduct, heading, btnHeading }) => {
+const AddEdit = ({ id, name, addProduct, heading, btnHeading }) => {
   const [product, setProduct] = useState({
     id: id || "",
     name: name || "",
@@ -34,4 +34,4 @@ const Add_Edit = ({ id, name, addProduct, heading, btnHeading }) => {
   );
 };
 
-export default Add_Edit;
+export default AddEdit;

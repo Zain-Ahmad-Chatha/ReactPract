@@ -1,0 +1,34 @@
+.headerContainer {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.headerContainer ul li {
+  color: white;
+}
+.colorWhite {
+  color: white;
+}
+.leftSection {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightSection {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,106 @@
+.bannerItem {
+  position: relative;
+}
+
+.heading {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.desc {
+  position: absolute;
+  top: 120px;
+  left: 50px;
+  font-size: 20px;
+}
+
+.cta {
+  position: absolute;
+  top: 275px;
+  left: 50px;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.cta a {
+  color: #000;
+}
+
+.cta:hover {
+  background-color: #000;
+}
+
+.cta:hover a {
+  color: #fff;
+}
+.width {
+  width: 100%;
+}
+
+/* 
+    cards 
+*/
+
+.cardsContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  width: 380px;
+  height: 220px;
+  border-radius: 5px;
+  padding: 30px;
+  position: relative;
+}
+.card img {
+  position: absolute;
+}
+
+.mango {
+  height: 200px;
+  bottom: -40px;
+  right: 0px;
+}
+
+.banana {
+  height: 170px;
+  bottom: -10px;
+  right: -20px;
+}
+
+.veg {
+  height: 130px;
+  bottom: 5px;
+  right: 10px;
+}
+
+.caption {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #101010;
+  letter-spacing: 3px;
+}
+
+.pink {
+  /* background-color: pink; */
+  background-color: #ff81c8;
+}
+.orange {
+  /* background-color: orange; */
+  background-color: #f9bb4a;
+}
+
+.blue {
+  background-color: #84e9fb;
+}

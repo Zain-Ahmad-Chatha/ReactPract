@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 40px auto;
+  background-color: green;
+  max-width: 600px;
+}
+.message {
+  color: black;
+}
+
+.message h4 {
+  font-size: x-large;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 10px 10px;
+}

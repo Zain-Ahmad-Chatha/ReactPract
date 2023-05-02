@@ -1,6 +1,20 @@
 import React from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+
+const navlinks = [
+  { to: "", name: "Home" },
+  { to: "contact", name: "Contact" },
+  { to: "about", name: "About" },
+  { to: "product", name: "Products" },
+  { to: "checkBox", name: "Check Box" },
+  { to: "redux", name: "Redux || Toolkit" },
+  { to: "counters", name: "Counter App" },
+  { to: "notes", name: "Notes Todo" },
+  { to: "todoList", name: "Todo List" },
+  { to: "freshCart", name: "Fresh Cart " },
+];
+
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -9,33 +23,15 @@ const Navbar = () => {
       <nav className="header">
         <h1>LOGO</h1>
         <ul>
-          <li>
-            <NavLink to={"/"}> Home </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/contact"}>Contact</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/about"}>About</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/product"}>Products</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/checkBox"}>Check Box</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/redux"}>Redux || Toolkit</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/counters"}>Counter App </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/notes"}>Notes Todo </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/todoList"}>Todo List </NavLink>
-          </li>
+          {!!navlinks &&
+            navlinks.length > 0 &&
+            navlinks.map((route, index) => {
+              return (
+                <li key={index}>
+                  <NavLink to={`/${route.to}`}> {route.name} </NavLink>
+                </li>
+              );
+            })}
         </ul>
       </nav>
       <hr></hr>

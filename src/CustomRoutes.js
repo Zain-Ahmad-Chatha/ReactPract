@@ -13,6 +13,13 @@ import CounterApp from "./counter_components";
 import { NotesTodoList } from "./todoList";
 import { TodoApp } from "./todoList2";
 import "./customRoutes.css";
+import FreshCartApp, {
+  Login,
+  Cart,
+  RenderProduct,
+  Final,
+  FreshCart,
+} from "./freshCart";
 
 const CustomRoutes = () => {
   return (
@@ -29,6 +36,9 @@ const CustomRoutes = () => {
             <Route path={"counters"} element={<CounterApp />} />
             <Route path={"notes"} element={<NotesTodoList />} />
             <Route path={"todoList"} element={<TodoApp />} />
+
+            <Route path={"freshCart"} element={<FreshCartApp />} />
+
             <Route path={"*"} element={<div>Page not Found </div>} />
           </React.Fragment>
         )}
@@ -45,6 +55,14 @@ const CustomRoutes = () => {
               <Route path={"counters"} element={<CounterApp />} />
               <Route path={"notes"} element={<NotesTodoList />} />
               <Route path={"todoList"} element={<TodoApp />} />
+              <Route path={"freshCart"} element={<FreshCartApp />}>
+                <Route path="" element={<FreshCart />} />
+                <Route exact={true} path="login" element={<Login />} />
+                <Route exact={true} path="cart" element={<Cart />} />
+                <Route exact={true} path="final" element={<Final />} />
+                <Route exact={true} path=":type" element={<RenderProduct />} />
+              </Route>
+
               <Route path={"*"} element={<div>Page not Found </div>} />
             </Route>
           </React.Fragment>
@@ -55,3 +73,7 @@ const CustomRoutes = () => {
 };
 
 export default CustomRoutes;
+
+// <Route path="/messages" element={<Messages />}>
+// <Route path=":id" element={<Chats />} />
+// </Route>
