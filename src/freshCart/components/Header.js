@@ -15,7 +15,7 @@ const Header = () => {
     Toaster('"Logged Out Successfully!"', "success", 4000);
   };
   return (
-    <>
+    <React.Fragment>
       <div className={headerStyle.headerContainer}>
         <div>
           <Link to={"/freshCart"} className={headerStyle.colorWhite}>
@@ -80,7 +80,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

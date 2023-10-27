@@ -35,7 +35,11 @@ const AddProduct = ({ item }) => {
       {item.quantity === 0 ? (
         <button
           onClick={() => onAddItem(item)}
-          style={{ width: "90%", marginRight: "10px" }}
+          style={{
+            width: "90%",
+            marginRight: "10px",
+            // background: "bisque"
+          }}
         >
           Add
         </button>
@@ -43,20 +47,29 @@ const AddProduct = ({ item }) => {
         <div
           style={{
             background: "whitesmoke",
+            // background: "bisque",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
           }}
         >
           <button
-            style={{ backgroundColor: "red", fontSize: "20px" }}
+            style={{
+              backgroundColor: "red",
+              // backgroundColor: "white",
+              fontSize: "20px",
+            }}
             onClick={() => onRemoveItem(item)}
           >
             -
           </button>
           <button style={{ flex: "1" }}> {item.quantity}</button>
           <button
-            style={{ backgroundColor: "green", fontSize: "20px" }}
+            style={{
+              backgroundColor: "green",
+              // backgroundColor: "white",
+              fontSize: "20px",
+            }}
             onClick={() => onIncreaseQuantity(item)}
           >
             +

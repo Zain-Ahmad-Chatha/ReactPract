@@ -25,7 +25,7 @@ const FreshCart = () => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
       {
         // carousal
       }
@@ -36,7 +36,7 @@ const FreshCart = () => {
       <Cards />
       <Products title={"Popular Fruits"} itemList={popularFruits} />
       <Products title={"Popular Vegetables"} itemList={popularVegetables} />
-    </>
+    </React.Fragment>
   );
 };
 

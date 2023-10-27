@@ -1,9 +1,9 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Toaster = (message, type, autoClose) => {
+const Toaster = (message, type, autoClose = 2000) => {
   toast[type](message, {
     position: "top-right",
-    autoClose: autoClose ? autoClose : 2000,
+    autoClose: autoClose,
     newestOnTop: true,
   });
 };

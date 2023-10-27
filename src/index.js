@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import reportWebVitals from "./reportWebVitals";
+// import reportWebVitals from "./reportWebVitals";
 // import Inputs from "./dynamicPractice/Inputs";
 import CustomRoutes from "./CustomRoutes";
 import { BrowserRouter } from "react-router-dom";
@@ -26,4 +26,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-reportWebVitals();
+// reportWebVitals();

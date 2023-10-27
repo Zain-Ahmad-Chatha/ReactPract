@@ -21,7 +21,12 @@ const Navbar = () => {
   return (
     <header>
       <nav className="header">
-        <h1>LOGO</h1>
+        <img
+          src={"./assets/stitch_logo_1.jpeg"}
+          style={{ width: "200px", height: "100px" }}
+          alt="STITCH & CO."
+          title="STITCH & CO."
+        />
         <ul>
           {!!navlinks &&
             navlinks.length > 0 &&

@@ -49,12 +49,15 @@ const CustomRoutes = () => {
               <Route path={"/"} element={<Home />} />
               <Route path={"contact"} element={<Contact />} />
               <Route path={"about"} element={<About />} />
+
               <Route path={"product"} element={<ProductList />} />
               <Route path={"checkBox"} element={<CheckBox />} />
               <Route path={"redux"} element={<Comment />} />
+
               <Route path={"counters"} element={<CounterApp />} />
               <Route path={"notes"} element={<NotesTodoList />} />
               <Route path={"todoList"} element={<TodoApp />} />
+
               <Route path={"freshCart"} element={<FreshCartApp />}>
                 <Route path="" element={<FreshCart />} />
                 <Route exact={true} path="login" element={<Login />} />
